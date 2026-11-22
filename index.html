@@ -3,98 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sukhaly Sunu Gokh - Boulangerie Saint-Louis</title>
+<title>Sukhaly Sunu Gokh - Louga</title>
 <style>
-body{font-family:Arial;background:#fff8ec;margin:0;padding:0}
-header{background:#008751;color:white;padding:25px 15px;text-align:center}
-header h1{margin:0;font-size:28px}
-.banner{background:#ffeaa7;padding:12px;text-align:center;font-weight:bold}
-h2{background:#008751;color:white;padding:10px;border-radius:10px;margin:20px 15px 10px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 15px}
-.card{background:white;border:1px solid #eee;border-radius:12px;padding:12px;text-align:center;box-shadow:0 2px 5px #ddd}
-.card p{color:#e67e22;font-weight:bold}
-button{background:#27ae60;color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
-#panier{margin:15px;background:white;padding:15px;border-radius:12px;box-shadow:0 2px 5px #ddd}
-input,select{width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:8px;box-sizing:border-box}
-.commander{background:#008751;width:100%;padding:14px;font-size:16px;margin-top:10px}
-.paybox{background:#eafaf1;padding:12px;border-radius:10px;margin:10px 15px;text-align:center}
-#confirmation{display:none;margin:15px;background:#d4edda;padding:20px;border-radius:12px;text-align:center}
-footer{text-align:center;padding:15px;color:#777}
-.ligne{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed #eee}
+body{margin:0;font-family:Arial,sans-serif;background:#0f0f0f;color:#fff;text-align:center}
+header{background:linear-gradient(180deg,#FFD700,#B8860B);color:#000;padding:40px 20px}
+header h1{font-size:32px;margin:0}
+header p{font-size:18px}
+.gold{color:#FFD700}
+.container{padding:20px}
+.card{background:#1a1a1a;border:2px solid #FFD700;border-radius:15px;padding:20px;margin:15px auto;max-width:400px;box-shadow:0 0 20px #FFD70055}
+.card h2{color:#FFD700;margin:0}
+.price{font-size:28px;color:#FFD700;font-weight:bold}
+.btn{display:block;background:#FFD700;color:#000;padding:15px;border-radius:30px;text-decoration:none;font-weight:bold;font-size:18px;margin:20px auto;max-width:300px}
+footer{padding:20px;color:#FFD700}
 </style>
 </head>
 <body>
 <header>
-<h1>🥐 Sukhaly Sunu Gokh</h1>
-<p>Boulangerie Saint-Louis - Pour notre quartier</p>
-<p>Livraison rapide - 500F seulement</p>
-<p>Paiement : Wave | Orange Money</p>
+<h1>✨ SUKHALY SUNU GOKH ✨</h1>
+<p>Boulangerie - Louga, Sénégal</p>
+<p>Pain frais, fait avec amour chaque matin</p>
 </header>
-<div class="banner">🔥 Commande avant 18h - Livré chez toi à Saint-Louis !</div>
-<div class="paybox"><b>💳 Payer par :</b><br>Wave : <b>78 307 16 66</b><br>Orange Money : <b>77 118 69 83</b></div>
-<h2>🍞 Boulangerie</h2>
-<div class="grid">
-<div class="card"><h3>Pain</h3><p>300F</p><button onclick="ajouter('Pain',300)">+ Ajouter</button></div>
-<div class="card"><h3>Dakar Wass</h3><p>500F</p><button onclick="ajouter('Dakar Wass',500)">+ Ajouter</button></div>
-<div class="card"><h3>Pain Chocolat</h3><p>500F</p><button onclick="ajouter('Pain Chocolat',500)">+ Ajouter</button></div>
-<div class="card"><h3>Pain Coco</h3><p>500F</p><button onclick="ajouter('Pain Coco',500)">+ Ajouter</button></div>
-<div class="card"><h3>Pain au Lait</h3><p>500F</p><button onclick="ajouter('Pain au Lait',500)">+ Ajouter</button></div>
+<div class="container">
+<div class="card">
+<h2>🍞 Pain Ordinaire</h2>
+<p>Pain frais du jour</p>
+<div class="price">150 FCFA</div>
 </div>
-<h2>🥯 Brioche</h2>
-<div class="grid">
-<div class="card"><h3>Chandouisse</h3><p>1000F</p><button onclick="ajouter('Chandouisse',1000)">+ Ajouter</button></div>
-<div class="card"><h3>Pizza</h3><p>2000F</p><button onclick="ajouter('Pizza',2000)">+ Ajouter</button></div>
+<div class="card">
+<h2>🥖 Pain Spécial</h2>
+<p>Pain doré, croustillant</p>
+<div class="price">300 FCFA</div>
 </div>
-<div id="panier">
-<h2 style="margin:0;background:none;color:#333;padding:0">🛒 Ton Panier</h2>
-<div id="liste">Panier vide</div>
-<p><b>Livraison : 500F</b></p>
-<p id="total"><b>Total : 0F</b></p>
-<input id="nom" placeholder="Ton nom *">
-<input id="adresse" placeholder="Ton quartier à Saint-Louis + adresse *">
-<input id="tel" placeholder="Ton numéro téléphone *">
-<label>Paiement :</label>
-<select id="paiement">
-<option>Wave - 78 307 16 66</option>
-<option>Orange Money - 77 118 69 83</option>
-<option>Paiement à la livraison</option>
-</select>
-<button class="commander" onclick="commander()">✅ COMMANDER SUR SUKHALY SUNU GOKH</button>
+<div class="card">
+<h2>🎂 Gâteau / Viennoiserie</h2>
+<p>Pour vos fêtes et cérémonies</p>
+<div class="price">1000 FCFA</div>
 </div>
-<div id="confirmation">
-<h2>✅ Jerejef ! Commande reçue !</h2>
-<p id="detailCommande"></p>
-<p><b>Étape 2 : Envoie le paiement</b></p>
-<p id="detailPaiement"></p>
-<p>On t'appelle pour confirmer ta livraison à Saint-Louis.</p>
-<button onclick="nouvelleCommande()">Faire une autre commande</button>
+<a class="btn" href="https://wa.me/221771234567">Commander sur WhatsApp</a>
+<p class="gold">Louga - Ouvert 6h à 22h</p>
 </div>
-<footer><b>Sukhaly Sunu Gokh</b> - Boulangerie Saint-Louis<br>Livraison 500F partout à Saint-Louis<br>Wave 78 307 16 66 | Orange Money 77 118 69 83</footer>
-<script>
-let panier = {};
-function afficherPanier(){
-let liste = document.getElementById('liste');let total = 0;
-if(Object.keys(panier).length === 0){liste.innerHTML = "Panier vide";document.getElementById('total').innerHTML = "<b>Total : 0F</b>";return;}
-let html = "";
-for(let nom in panier){let item = panier[nom];total += item.prix * item.qte;html += `<div class="ligne"><span>${nom} x ${item.qte}</span><span>${item.prix * item.qte}F <button onclick="retirer('${nom}')" style="background:#e74c3c;padding:2px 7px">-</button></span></div>`;}
-liste.innerHTML = html;document.getElementById('total').innerHTML = `<b>Total avec livraison : ${total+500}F</b>`;
-}
-function ajouter(nom,prix){if(panier[nom]) panier[nom].qte++;else panier[nom] = {prix:prix, qte:1};afficherPanier();}
-function retirer(nom){panier[nom].qte--;if(panier[nom].qte <= 0) delete panier[nom];afficherPanier();}
-function commander(){
-let nom=document.getElementById('nom').value.trim();let adresse=document.getElementById('adresse').value.trim();let tel=document.getElementById('tel').value.trim();let paiement=document.getElementById('paiement').value;
-if(Object.keys(panier).length==0){alert("Ton panier est vide");return;}
-if(!nom || !adresse || !tel){alert("Remplis ton nom, adresse et téléphone");return;}
-let total=0; let lignes=[];for(let n in panier){ total += panier[n].prix * panier[n].qte; lignes.push(n+" x "+panier[n].qte+" = "+(panier[n].prix*panier[n].qte)+"F"); }
-let numero = Math.floor(Math.random()*9000)+1000;
-document.getElementById('panier').style.display='none';document.getElementById('confirmation').style.display='block';
-document.getElementById('detailCommande').innerHTML="Commande N° <b>SG-"+numero+"</b><br>"+lignes.join('<br>')+"<br>Livraison: 500F<br><b>Total: "+(total+500)+"F</b><br>Nom: "+nom+"<br>Adresse: "+adresse+"<br>Tél: "+tel;
-document.getElementById('detailPaiement').innerHTML="Tu as choisi: <b>"+paiement+"</b><br>Si Wave, envoie à 78 307 16 66<br>Si Orange Money, envoie à 77 118 69 83<br>Mets ton nom en motif: "+nom;
-let msg="Nouvelle commande SG-"+numero+"%0A"+lignes.join('%0A')+"%0A Total: "+(total+500)+"F %0A Nom: "+nom+"%0A Adresse: "+adresse+"%0A Tel: "+tel+"%0A Paiement: "+paiement;
-window.open("https://wa.me/221783071666?text="+msg);window.scrollTo(0,0);
-}
-function nouvelleCommande(){panier={}; afficherPanier();document.getElementById('panier').style.display='block';document.getElementById('confirmation').style.display='none';}
-afficherPanier();
-</script>
+<footer>© 2026 Sukhaly Sunu Gokh - Tout en OR</footer>
 </body>
 </html>
